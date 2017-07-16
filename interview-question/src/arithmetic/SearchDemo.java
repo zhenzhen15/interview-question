@@ -24,7 +24,7 @@ public class SearchDemo {
 			}
 		}
 	}
-	//ʵ�ֶ����㷨jjjjrdgffdg
+	//ʵ�ֶ����㷨jjjjrdgffdglll
 	public static int binaryFind(int[]data,int target){
 		int start = 0;
 		int end = data.length-1;
