@@ -3,14 +3,15 @@ package arithmetic;
 import java.util.Arrays;
 
 /**
- * 实现数组a[1000]，查找俩个相同的数
- * 二分法查找
- * @author 丁鹏
+ * 实锟斤拷锟斤拷锟斤拷a[1000]锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷同锟斤拷锟斤拷
+ * 锟斤拷锟街凤拷锟斤拷锟斤拷
+ * @author 锟斤拷锟斤拷
  *
  */
 
 public class SearchDemo {
-	//调用二分查找相同的元素
+	//nihao 
+	//锟斤拷锟矫讹拷锟街诧拷锟斤拷锟斤拷同锟斤拷元锟斤拷
 	public static void result(int data[]){
 		Arrays.sort(data);
 		for (int i = 0; i < data.length; i++) {
@@ -18,12 +19,12 @@ public class SearchDemo {
 			data[i]=0;
 			int result = binaryFind(data, target);
 			if(result!=-1){
-				System.out.println("相同元素为："+data[result]);
+				System.out.println("锟斤拷同元锟斤拷为锟斤拷"+data[result]);
 				break;
 			}
 		}
 	}
-	//实现二分算法
+	//实锟街讹拷锟斤拷锟姐法
 	public static int binaryFind(int[]data,int target){
 		int start = 0;
 		int end = data.length-1;
