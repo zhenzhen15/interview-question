@@ -38,7 +38,7 @@ public class FindAssistant  extends UiAutomatorTestCase{
 	static final int  CLICK_ID = 10;
 	static final int  CLICK_TEXT = 20;
 	static final int  CLICK_CLASS = 30;
-	public boolean ClickById(String id){
+	public static boolean ClickById(String id){
 		return ClickInfo(CLICK_ID,id) ;
 	}
 	
