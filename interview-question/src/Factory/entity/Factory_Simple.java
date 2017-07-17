@@ -1,6 +1,7 @@
 package Factory.entity;
 
 public class Factory_Simple {
+	//1001010
 	 public BMW createBMW(int name){
 		switch (name) {
 		case 320:
