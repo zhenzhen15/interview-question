@@ -38,35 +38,37 @@ public class FindAssistant  extends UiAutomatorTestCase{
 	static final int  CLICK_ID = 10;
 	static final int  CLICK_TEXT = 20;
 	static final int  CLICK_CLASS = 30;
-	public static boolean ClickById(String id){
+	public static UiObject ClickById(String id){
 		return ClickInfo(CLICK_ID,id) ;
 	}
 	
-	public static boolean ClickByText(String text){
+	public static UiObject ClickByText(String text){
 		return ClickInfo(CLICK_TEXT, text);
 	}
-	public static boolean ClickByClassName(String classname,int i) {
+	public static UiObject ClickByClassName(String classname,int i) {
 		return ClickInfo(CLICK_CLASS, classname,i);		
 	}
 	
 	
-	public  static boolean ClickInfo( int CLICK ,String str,int ...args){
+	public  static UiObject ClickInfo( int CLICK ,String str,int ...args){
 		UiSelector uislector = null;
+		UiObject uiobject = null;
 		switch(CLICK){
 		case CLICK_ID : uislector = new UiSelector().resourceId(str);break;
 		case CLICK_TEXT: uislector = new UiSelector().text(str); break;
 		case CLICK_CLASS: uislector = new UiSelector().className(str).index(args[0]);break;
-		default : return false;
+		default : return uiobject;
 		
 		}
 		
-		UiObject uiobject = new UiObject(uislector);
+		uiobject = new UiObject(uislector);
 		int i =0;
 		while(!uiobject.exists()&& i<5){
 			sleep(500);
 			if(i==4){
 				TakeScreen(getDevice(), str+"-not-find");
-				return false;
+				return uiobject;
+				
 			}
 			i++;
 			
@@ -79,7 +81,7 @@ public class FindAssistant  extends UiAutomatorTestCase{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return true;
+		return uiobject;
 		
 		
 		

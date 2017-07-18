@@ -1,5 +1,7 @@
 package meeting.ui.page;
 
+import com.android.uiautomator.core.UiObject;
+
 import android.R.bool;
 import meeting.publics.FindAssistant;
 
@@ -9,12 +11,12 @@ public class HomePage {
 	 * @param args
 	 */
 	 
-	public static  void loginButton(String id){
-		 FindAssistant.ClickById(id);
+	public static  UiObject loginButton(String id){
+		return FindAssistant.ClickById(id);
 		
 		
 	}
-	public static boolean registerButton(String id){
+	public static UiObject registerButton(String id){
 		return FindAssistant.ClickById(id);
 		
 	}
