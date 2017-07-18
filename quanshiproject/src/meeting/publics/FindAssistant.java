@@ -43,7 +43,9 @@ public class FindAssistant  extends UiAutomatorTestCase{
 	}
 	
 	public static UiObject ClickByText(String text){
+		System.out.println(text);
 		return ClickInfo(CLICK_TEXT, text);
+		
 	}
 	public static UiObject ClickByClassName(String classname,int i) {
 		return ClickInfo(CLICK_CLASS, classname,i);		
@@ -95,10 +97,10 @@ public class FindAssistant  extends UiAutomatorTestCase{
 		//保存文件
 		File screens = new File("/sdcard/screens");
 		if(!screens.exists()&&!screens.isDirectory()){
-			System.out.println("create new folder :/sdcard/screens");
+			System.out.println("create new folder: /sdcard/screens");
 			screens.mkdir();
 		}else {
-			System.out.println("Already have Folder：/sdcard/screens");
+			System.out.println("Already have Folder: /sdcard/screens");
 		}
 		File files = new File("/sdcard/screens/"+dateStr+"_"+descrip+".png");
 		UiAutomationLog("TakeScreen:"+dateStr+"_"+descrip+".jpg");

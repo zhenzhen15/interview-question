@@ -17,9 +17,7 @@ public class ChooseEnviromentCase extends UiAutomatorTestCase {
 		sleep(500);
 		
 		//环境选择
-		SettingEnviroment.ClickLogoButton();
-		SettingEnviroment.ChooseEviroment();
-		SettingEnviroment.clickOkButton();
+		SettingEnviroment.chooseEnviroment();
 		
 	}
 

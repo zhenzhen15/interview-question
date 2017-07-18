@@ -18,6 +18,11 @@ import com.android.uiautomator.core.UiObject;
 		return EnviromentPage.ClickOkButton(EnviromentPageContant.confim);
 		
 	}
+	public  static void chooseEnviroment(){
+		ClickLogoButton();
+		ChooseEviroment();
+		clickOkButton();
+	}
 	
 
 }
